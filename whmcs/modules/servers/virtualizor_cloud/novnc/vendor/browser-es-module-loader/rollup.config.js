@@ -1,16 +1,15 @@
-import nodeResolve from 'rollup-plugin-node-resolve';
-
-export default {
-  entry: 'src/browser-es-module-loader.js',
-  dest: 'dist/browser-es-module-loader.js',
-  format: 'umd',
-  moduleName: 'BrowserESModuleLoader',
-  sourceMap: true,
-
-  plugins: [
-    nodeResolve(),
-  ],
-
-  // skip rollup warnings (specifically the eval warning)
-  onwarn: function() {}
-};
+import nodeResolve from 'rollup-plugin-node-resolve';
+
+export default {
+  input: 'src/browser-es-module-loader.js',
+  output: {
+    file: 'dist/browser-es-module-loader.js',
+    format: 'umd',
+    name: 'BrowserESModuleLoader',
+    sourcemap: true,
+  },
+
+  plugins: [
+    nodeResolve(),
+  ],
+};
