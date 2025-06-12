@@ -1417,7 +1417,8 @@ function virtualizor_cloudUI($params, $url_prefix = 'clientarea.php?action=produ
             }
 
             //Read the file
-            $data = file_get_contents($var['theme_path'] . 'index.html');
+            $theme .= virt_cloud_done('The VPS backup process has been started. Please allow a few minutes for it to complete. You will receive a notification email when its is completed');
+            $theme .= virt_cloud_done('The VPS restore process has been started. Please allow a few minutes for it to complete. You will receive a notification email when its is completed');
 
             $filetime = filemtime($var['theme_path'] . 'index.html');
         }
